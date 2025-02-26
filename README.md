@@ -2,7 +2,11 @@
 
 InsightIQ is a powerful web-based platform that allows you to analyze and extract insights from multiple web sources using natural language questions. Powered by LangChain and OpenAI, InsightIQ provides intelligent answers based on the content of the URLs you provide.
 
-![InsightIQ Screenshot](screenshot.png)
+# InsightIQ Architecture
+
+Below is the architecture diagram for the InsightIQ application:
+
+![InsightIQ Architecture](insightiq-architecture-diagram.png)
 
 ## Features
 

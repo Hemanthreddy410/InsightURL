@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightIQ - Web Intelligence Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <h1>InsightIQ</h1>
+                </div>
+                <p class="tagline">Web Intelligence Platform</p>
+            </div>
+
+            <div class="url-section">
+                <h2><i class="fas fa-link"></i> Source URLs</h2>
+                <form id="url-form">
+                    <div class="form-group">
+                        <input type="url" id="url1" name="url1" placeholder="Enter URL #1">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" id="url2" name="url2" placeholder="Enter URL #2">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" id="url3" name="url3" placeholder="Enter URL #3">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" id="url4" name="url4" placeholder="Enter URL #4">
+                    </div>
+                    <div class="form-group">
+                        <input type="url" id="url5" name="url5" placeholder="Enter URL #5">
+                    </div>
+                    <button type="submit" class="btn-process">
+                        <i class="fas fa-sync-alt"></i> Process Sources
+                    </button>
+                </form>
+                <div id="loading" class="hidden">
+                    <div class="loader"></div>
+                    <p class="status-message">Processing sources...</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>&copy; 2025 InsightIQ</p>
+            </div>
+        </div>
+
+        <main>
+            <header>
+                <h2><i class="fas fa-search-plus"></i> Intelligent Analysis</h2>
+                <p>Ask questions about your sources to get intelligent insights</p>
+            </header>
+
+            <section class="question-section">
+                <div class="card">
+                    <h2><i class="fas fa-question-circle"></i> Ask InsightIQ</h2>
+                    <form id="question-form">
+                        <div class="form-group">
+                            <input type="text" id="query" name="query" placeholder="What would you like to know about your sources?">
+                            <button type="submit" class="btn-ask">
+                                <i class="fas fa-search"></i> Ask
+                            </button>
+                        </div>
+                    </form>
+                    <div id="answer-loading" class="hidden">
+                        <div class="loader"></div>
+                        <p class="status-message">Analyzing content...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div class="card" id="results-card">
+                    <div class="results-header">
+                        <h2><i class="fas fa-lightbulb"></i> Insights</h2>
+                        <div class="actions hidden" id="result-actions">
+                            <button id="btn-copy" class="btn-icon" title="Copy to clipboard">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                            <button id="btn-save" class="btn-icon" title="Save as PDF">
+                                <i class="fas fa-file-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="answer-container" class="hidden">
+                        <div id="answer" class="answer-text"></div>
+                        
+                        <div id="sources-container">
+                            <h3><i class="fas fa-book"></i> Sources:</h3>
+                            <ul id="sources-list"></ul>
+                        </div>
+                    </div>
+                    <div id="no-results" class="welcome-message">
+                        <i class="fas fa-brain brain-icon"></i>
+                        <p>Add your source URLs on the left and ask a question to get started</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

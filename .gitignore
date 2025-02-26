@@ -1,0 +1,25 @@
+# Environment
+.env
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+faiss_store_openai.pkl
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db

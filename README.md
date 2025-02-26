@@ -10,8 +10,6 @@ InsightIQ is a powerful web-based platform that allows you to analyze and extrac
 - Support for up to 5 web sources at once
 - Intelligent processing of web content using LangChain
 - Natural language question answering using OpenAI
-- Copy to clipboard and PDF export functionality
-- Fully responsive design that works on desktop and mobile
 - Robust error handling and user feedback
 
 ## Installation
@@ -19,7 +17,7 @@ InsightIQ is a powerful web-based platform that allows you to analyze and extrac
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/insightiq.git
+git clone https://github.com/hemanthreddy410/insighturl.git
 cd insightiq
 ```
 
